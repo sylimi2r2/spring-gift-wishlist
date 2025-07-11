@@ -3,7 +3,6 @@ package gift.controller;
 import gift.dto.TokenResponseDto;
 import gift.dto.UserRequestDto;
 import gift.service.UserService;
-import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

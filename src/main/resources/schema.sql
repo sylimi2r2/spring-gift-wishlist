@@ -10,3 +10,9 @@ create table users (
     email varchar(255) not null unique,
     password varchar(255) not null
 )
+
+create table wish (
+    userId bigint not null,
+    productId bigint not null,
+    number bigint check ( number > 0 )
+)

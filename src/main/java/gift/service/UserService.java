@@ -21,6 +21,10 @@ public class UserService {
         this.jwtProvider = jwtProvider;
     }
 
+    public boolean existsById(Long userId) {
+        return userRepository.findById(userId).isPresent();
+    }
+
     public String register(UserRequestDto userRequestDto) {
         if (userRepository.findByEmail(userRequestDto.email()).isPresent()) {
             throw new EmailAlreadyExistsException("이미 사용 중인 이메일입니다. " + userRequestDto.email().value());
